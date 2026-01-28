@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App — OpenWeatherMap</title>
+  <meta name="description" content="Simple responsive weather app using OpenWeatherMap API. Enter a city name to get current weather in Celsius.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="title">Weather App</h1>
+      <p class="subtitle">Get current weather by city — powered by OpenWeatherMap</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <form id="search-form" class="search-form" aria-label="Search weather by city">
+        <label for="city" class="sr-only">City name</label>
+        <input id="city" name="city" type="text" placeholder="Enter city name (e.g. London)" required autocomplete="on" />
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+
+      <div id="message" role="status" aria-live="polite" class="message"></div>
+
+      <section id="weather-card" class="weather-card hidden" aria-live="polite">
+        <div class="city-row">
+          <h2 id="city-name">City</h2>
+          <div id="icon-wrap" class="icon-wrap" aria-hidden="true">
+            <img id="weather-icon" alt="" src="" />
+          </div>
+        </div>
+
+        <div class="temp-row">
+          <p class="temp" id="temperature">--°C</p>
+          <p class="condition" id="condition">--</p>
+        </div>
+
+        <div class="details-row">
+          <p id="feels-like" class="muted small"></p>
+          <p id="humidity" class="muted small"></p>
+          <p id="wind" class="muted small"></p>
+        </div>
+      </section>
+
+      <footer class="note">
+        <p class="small muted">Tip: Press Enter to search. Replace the API key in script.js with your OpenWeatherMap API key.</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
