@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Responsive Landing</title>
+    <meta name="description" content="Responsive landing page with scroll-reactive navbar." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="container nav-inner">
+                <a class="brand" href="#">Aishu</a>
+
+                <button class="nav-toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="btn primary" href="#signup">Get Started</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>Clean & Responsive Landing</h1>
+                <p>Simple, modern UI built with HTML, CSS and JavaScript. Works great on mobile and desktop.</p>
+                <div class="hero-cta">
+                    <a class="btn primary" href="#features">Explore Features</a>
+                    <a class="btn ghost" href="#about">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Responsive</h3>
+                        <p>Looks great on phones, tablets and desktops.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Interactive</h3>
+                        <p>Navbar reacts on scroll and mobile menu toggles smoothly.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Accessible</h3>
+                        <p>Keyboard accessible toggle and semantic structure.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section alt">
+            <div class="container">
+                <h2>About</h2>
+                <p>A minimal starting template to build landing pages with a clean UI and simple patterns.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Want to get started? Reach out or sign up below.</p>
+                <form id="signup" class="form">
+                    <input type="email" placeholder="Your email" aria-label="Email address" required />
+                    <button class="btn primary" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Aishu — Built with simplicity in mind.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
