@@ -1,0 +1,135 @@
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --accent: #2b6cb0;
+  --x-color: #e53e3e;
+  --o-color: #2b6cb0;
+  --muted: #6b7280;
+  --win-color: #68d391;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+  color:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  width:100%;
+  max-width:420px;
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 6px 18px rgba(15,23,42,0.08);
+  text-align:center;
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:1.4rem;
+}
+
+.game{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:stretch;
+}
+
+.status{
+  font-size:0.95rem;
+  color:var(--muted);
+}
+
+#currentPlayer{
+  font-weight:700;
+  color:var(--accent);
+  margin-left:6px;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:8px;
+  padding:6px;
+  justify-items:stretch;
+  align-items:stretch;
+}
+
+.cell{
+  width:100%;
+  aspect-ratio:1/1;
+  background:linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+  border:2px solid rgba(15,23,42,0.06);
+  border-radius:8px;
+  font-size:2.4rem;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:transform 0.08s ease, box-shadow 0.08s ease;
+  user-select:none;
+  color:#111827;
+}
+
+.cell:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(15,23,42,0.06);
+}
+
+.cell.filled{
+  cursor:default;
+  transform:none;
+  box-shadow:none;
+}
+
+.cell.x{
+  color:var(--x-color);
+}
+
+.cell.o{
+  color:var(--o-color);
+}
+
+.cell.win{
+  background: linear-gradient(180deg, #f0fff4 0%, #ecfdf5 100%);
+  border-color: rgba(104,211,145,0.5);
+  box-shadow: 0 6px 14px rgba(72,187,120,0.08) inset;
+}
+
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:6px;
+}
+
+.btn{
+  padding:8px 14px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:0 6px 12px rgba(43,108,176,0.12);
+}
+
+.btn:hover{opacity:0.95}
+
+.message{
+  min-height:28px;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.footer{margin-top:10px; color:var(--muted); font-size:0.82rem}

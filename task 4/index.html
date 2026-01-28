@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aishu S — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Aishu S — Aspiring Data Scientist & Web Developer. Portfolio showcasing skills, projects, and contact information.">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Aishu S</a>
+
+      <!-- Mobile nav toggle (CSS only) -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-hidden="true">
+      <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true" aria-label="Open navigation">
+        <span></span>
+      </label>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Home -->
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Hi there, I'm Aishu S <span class="wave">👋</span></h1>
+        <p class="lead">Aspiring Data Scientist | Web Developer | AI Enthusiast — I'm a third-year undergraduate passionate about bridging web development and data-driven AI solutions. I enjoy turning complex data into actionable insights and building interactive user experiences.</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">Featured Projects</a>
+          <a class="btn outline" href="#contact">Get in Touch</a>
+        </div>
+
+        <ul class="quick-info">
+          <li><strong>Location:</strong> India</li>
+          <li><strong>Open to:</strong> Internships & Collaborations</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-card">
+          <p class="muted small">"Building the future, one line of code at a time."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section container about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a third-year undergraduate student passionate about bridging robust Web Development and data-driven AI solutions.
+            I enjoy turning complex data into actionable insights and building interactive user experiences. I focus on clear layouts,
+            reproducible data workflows, and models that provide real value.
+          </p>
+
+          <h3>Interests</h3>
+          <p class="muted">UI/UX, Time-Series Forecasting, Computer Vision, and ML model deployment.</p>
+        </div>
+
+        <div class="about-stats">
+          <p><strong>Education:</strong> Third-year undergraduate</p>
+          <p><strong>Tools:</strong> VS Code · Git · GitHub · Python · Tkinter</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <p class="muted">Technologies and tools I use regularly</p>
+
+      <div class="skills-list">
+        <div class="skill-group">
+          <h4>Data Science</h4>
+          <ul>
+            <li>Python (Pandas, NumPy, Scikit-learn)</li>
+            <li>Time Series: ARIMA, SARIMA, Prophet, LSTM</li>
+            <li>Computer Vision (OpenCV)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h4>Web Development</h4>
+          <ul>
+            <li>HTML5 · CSS3 · JavaScript (ES6+)</li>
+            <li>Responsive Design · API Integration</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h4>Machine Learning</h4>
+          <ul>
+            <li>Regression · Classification</li>
+            <li>Model evaluation, preprocessing, and pipelines</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <ul>
+            <li>Git · GitHub · VS Code · Tkinter</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2>Featured Projects</h2>
+      <p class="muted">A mix of Data Science and Web Development projects I built while learning and interning.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">Data Science</div>
+          </div>
+          <div class="project-body">
+            <h3>Time Series Stock Forecasting</h3>
+            <p>Predicted market trends using ARIMA, SARIMA, and LSTM models. Includes preprocessing, model selection, and evaluation to improve accuracy.</p>
+            <p class="tech">Python · Pandas · NumPy · Scikit-learn · TensorFlow</p>
+            <p class="muted small">Notes: notebooks with visualizations and comparative model analysis.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">AI / CV</div>
+          </div>
+          <div class="project-body">
+            <h3>AI-Powered Smart Air Canvas</h3>
+            <p>A computer vision project using OpenCV that allows users to draw in the air via hand gestures. Gesture recognition mapped to drawing actions.</p>
+            <p class="tech">Python · OpenCV · MediaPipe</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">App</div>
+          </div>
+          <div class="project-body">
+            <h3>2048 Game (Desktop)</h3>
+            <p>A logic-based desktop application built with Python and Tkinter. Focused on game logic, scoring, and a simple GUI.</p>
+            <p class="tech">Python · Tkinter</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">Web</div>
+          </div>
+          <div class="project-body">
+            <h3>Weather App (Prodigy Infotech Internship)</h3>
+            <p>Real-time weather fetching using OpenWeather API. Clean UI and responsive layout to show current weather and forecast.</p>
+            <p class="tech">HTML · CSS · JavaScript · OpenWeather API</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">Web</div>
+          </div>
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>Fully responsive personal site to showcase projects and skills (this site).</p>
+            <p class="tech">HTML · CSS · Responsive Design</p>
+            <div class="project-links">
+              <a class="btn small" href="https://github.com/aishu-codes" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" aria-hidden="true">
+            <div class="project-tag">Interactive</div>
+          </div>
+          <div class="project-body">
+            <h3>Interactive Web Apps</h3>
+            <p>Tic-Tac-Toe, Stopwatch, and multiple landing pages built with a focus on clean UI/UX and simple logic.</p>
+            <p class="tech">HTML · CSS · JavaScript</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Web Development Intern — Prodigy Infotech</h3>
+          <p class="muted">Task-based internship focusing on frontend logic, building pages and small interactive components.</p>
+        </div>
+
+        <div class="experience-item">
+          <h3>Content Writing Intern — Inamigos Foundation</h3>
+          <p class="muted">Professional documentation, research, and content creation for projects and reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container contact">
+      <h2>Contact</h2>
+      <p class="muted">I'm open to collaborations, internships, and interesting projects — feel free to reach out.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:aishu122325email@gmail.com">aishu122325email@gmail.com</a></p>
+
+          <h3>Connect</h3>
+          <p>
+            <a href="https://github.com/aishu-codes" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a> ·
+            <a href="https://instagram.com/aishu.codes" target="_blank" rel="noopener">Instagram</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Quick message</h3>
+          <form class="contact-form" action="mailto:aishu122325email@gmail.com" method="get" accept-charset="utf-8">
+            <label for="name" class="sr-only">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write a message" required></textarea>
+
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Aishu S — Built with HTML &amp; CSS</p>
+      <p class="muted small">Designed for clarity and readability.</p>
+    </div>
+  </footer>
+
+  <!-- Small inline script to update the year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
