@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prodigy Infotech — Task 2</title>
+    <meta name="description" content="Simple responsive page for Prodigy Infotech task." />
+    <style>
+        :root{
+            --bg:#0f1724;
+            --card:#0b1220;
+            --muted:#94a3b8;
+            --accent:#06b6d4;
+            --glass: rgba(255,255,255,0.03);
+            --radius:10px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:linear-gradient(180deg,var(--bg),#061022 80%);
+            color:#e6eef6;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.5;
+            padding:24px;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:28px;
+        }
+        .brand{
+            display:flex;
+            gap:12px;
+            align-items:center;
+        }
+        .logo{
+            width:48px;height:48px;border-radius:10px;
+            background:linear-gradient(135deg,var(--accent),#7c3aed);
+            display:grid;place-items:center;font-weight:700;color:#001;
+            box-shadow:0 6px 18px rgba(6,182,212,0.18), inset 0 -6px 12px rgba(0,0,0,0.2);
+        }
+        h1{font-size:18px;margin:0}
+        .nav{
+            display:flex;
+            gap:12px;
+            align-items:center;
+        }
+        .btn{
+            background:var(--glass);
+            border:1px solid rgba(255,255,255,0.04);
+            color:var(--accent);
+            padding:8px 14px;border-radius:8px;
+            cursor:pointer;font-weight:600;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 360px;
+            gap:20px;
+            align-items:start;
+        }
+
+        .card{
+            background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:var(--radius);
+            padding:18px;
+            border:1px solid rgba(255,255,255,0.03);
+            box-shadow:0 6px 24px rgba(2,6,23,0.6);
+        }
+
+        .hero{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+        }
+        .hero h2{margin:0;font-size:22px}
+        .muted{color:var(--muted);font-size:14px}
+
+        .features{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:12px;
+            margin-top:12px;
+        }
+        .feature{
+            background:rgba(255,255,255,0.02);
+            padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);
+            min-height:72px;
+        }
+        .feature h4{margin:0 0 6px 0;font-size:15px}
+        code.snippet{
+            display:block;
+            white-space:pre;
+            background:rgba(0,0,0,0.25);
+            padding:8px;border-radius:6px;font-family:monospace;font-size:13px;
+            color:#d1faff;overflow:auto;
+        }
+
+        form .row{display:flex;gap:8px}
+        .input, textarea{
+            width:100%;
+            padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);
+            background:transparent;color:inherit;font:inherit;
+            outline:none;
+        }
+        textarea{min-height:120px;resize:vertical}
+
+        footer{
+            margin-top:20px;color:var(--muted);font-size:13px;text-align:center;
+        }
+
+        @media (max-width:880px){
+            .grid{grid-template-columns:1fr}
+            header{flex-direction:column;align-items:flex-start;gap:12px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">PI</div>
+                <div>
+                    <h1>Prodigy Infotech</h1>
+                    <div class="muted">Task 2 — Simple responsive demo</div>
+                </div>
+            </div>
+            <nav class="nav" aria-label="Primary">
+                <button class="btn" id="themeToggle" title="Toggle theme">Toggle</button>
+                <a class="btn" href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main class="grid" role="main">
+            <section class="card hero" aria-labelledby="heroTitle">
+                <h2 id="heroTitle">Welcome — fill this page</h2>
+                <p class="muted">This is a starter single-file HTML page. Use it as a template to prototype UI, forms, or documentation for your task.</p>
+
+                <div class="features" aria-hidden="false">
+                    <div class="feature">
+                        <h4>Responsive Layout</h4>
+                        <p class="muted">Adapts to mobile and desktop automatically.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Accessible</h4>
+                        <p class="muted">Semantic markup and ARIA-friendly controls.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Form Ready</h4>
+                        <p class="muted">Submit to server or store locally for testing.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top:14px">Example code snippet</h3>
+                <code class="snippet">&lt;button class="btn"&gt;Primary&lt;/button&gt;</code>
+            </section>
+
+            <aside class="card" id="contact" aria-labelledby="contactTitle">
+                <h3 id="contactTitle">Contact / Feedback</h3>
+                <p class="muted">Send a quick message. This demo stores your message in localStorage for preview.</p>
+
+                <form id="feedbackForm" novalidate>
+                    <div style="margin-bottom:10px">
+                        <label class="muted" for="name">Name</label>
+                        <input id="name" class="input" name="name" type="text" placeholder="Your name" required />
+                    </div>
+
+                    <div style="margin-bottom:10px">
+                        <label class="muted" for="email">Email</label>
+                        <input id="email" class="input" name="email" type="email" placeholder="you@example.com" required />
+                    </div>
+
+                    <div style="margin-bottom:10px">
+                        <label class="muted" for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write something..." required></textarea>
+                    </div>
+
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <button class="btn" type="submit">Send</button>
+                        <button id="clearBtn" type="button" class="btn" title="Clear saved messages">Clear</button>
+                    </div>
+
+                    <div id="status" class="muted" style="margin-top:8px;font-size:13px"></div>
+                </form>
+            </aside>
+        </main>
+
+        <footer>
+            <div>Made for Prodigy Infotech — Task 2 • Minimal single-file demo</div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple behavior: save form to localStorage, basic validation, theme toggle
+        const form = document.getElementById('feedbackForm');
+        const status = document.getElementById('status');
+        const clearBtn = document.getElementById('clearBtn');
+        const themeToggle = document.getElementById('themeToggle');
+
+        const STORAGE_KEY = 'pi_task2_messages_v1';
+
+        function loadLast() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return;
+                const items = JSON.parse(raw);
+                if (!items.length) return;
+                const last = items[items.length - 1];
+                form.name.value = last.name || '';
+                form.email.value = last.email || '';
+                form.message.value = last.message || '';
+                status.textContent = 'Loaded last saved message preview';
+            } catch(e){ console.warn(e) }
+        }
+
+        function saveMessage(obj) {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                const items = raw ? JSON.parse(raw) : [];
+                items.push(Object.assign({ts:new Date().toISOString()}, obj));
+                // keep last 10
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(items.slice(-10)));
+            } catch(e){ console.warn(e) }
+        }
+
+        form.addEventListener('submit', (ev)=>{
+            ev.preventDefault();
+            const data = {
+                name: form.name.value.trim(),
+                email: form.email.value.trim(),
+                message: form.message.value.trim()
+            };
+            if(!data.name || !data.email || !data.message){
+                status.textContent = 'Please fill all fields.';
+                return;
+            }
+            saveMessage(data);
+            status.textContent = 'Message saved locally. (Demo mode — no server)';
+            form.reset();
+        });
+
+        clearBtn.addEventListener('click', ()=>{
+            localStorage.removeItem(STORAGE_KEY);
+            status.textContent = 'Saved messages cleared.';
+            form.reset();
+        });
+
+        // simple theme toggle (light/dark, very subtle)
+        themeToggle.addEventListener('click', ()=>{
+            document.documentElement.style.setProperty('--bg',
+                getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() === '#ffffff' ? '#0f1724' : '#ffffff');
+            document.documentElement.style.setProperty('--card',
+                getComputedStyle(document.documentElement).getPropertyValue('--card').trim() === '#ffffff' ? '#0b1220' : '#ffffff');
+            // This toggles briefly; for production implement a more thorough approach.
+        });
+
+        // initialize
+        loadLast();
+    </script>
+</body>
+</html></div>
