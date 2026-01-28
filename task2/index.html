@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch</title>
+  <meta name="description" content="Simple responsive stopwatch with Start, Stop and Reset buttons." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1 class="title">Stopwatch</h1>
+      <p class="subtitle">HH:MM:SS — Start, Stop, Reset</p>
+    </header>
+
+    <section class="stopwatch" aria-labelledby="title">
+      <div class="display" id="timeDisplay" role="timer" aria-live="polite">00:00:00</div>
+
+      <div class="controls" role="group" aria-label="Stopwatch controls">
+        <button id="startBtn" class="btn btn-primary" type="button" aria-pressed="false">Start</button>
+        <button id="stopBtn" class="btn" type="button" disabled>Stop</button>
+        <button id="resetBtn" class="btn" type="button" disabled>Reset</button>
+      </div>
+
+      <p class="hint">Keyboard: <strong>Space</strong> toggles Start/Stop, <strong>R</strong> resets</p>
+    </section>
+
+    <footer class="footer">
+      <small>Made with plain HTML, CSS & JavaScript — responsive and accessible.</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
